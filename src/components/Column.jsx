@@ -67,7 +67,7 @@ const TicketCard = ({ ticket, groupBy }) => {
           </div>
         )}
       </div>
-      <h4 className="ticket-card-title">{ticket.title}</h4>
+      <h4 className="ticket-card-title">{groupBy !== 'status' ? <img className="ticket-card-status-icon" src={statusIcons[ticket.status]} /> : null}{ticket.title}</h4>
       <div className="ticket-tags">
         {
           ticket.tag.map((tag) => {

@@ -60,6 +60,14 @@
     margin-top: -0.9rem;
     max-width: 75%;
     margin-bottom: -0.5rem;
+    display: flex;
+    gap: 0.5rem;
+    align-items: flex-start;
+    /* justify-content: center; */
+    /* border: 2px solid black; */
+}
+.ticket-card-status-icon{
+    margin-top: 0.2rem;
 }
 
 /* Column header style */
