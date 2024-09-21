@@ -50,7 +50,7 @@ function App() {
   return (
     <>
       <div className="display-container" onClick={toggleDisplay}>
-        <img src="./display.svg" />{" "}
+        <img src="/display.svg" />{" "}
         <span className="display-title">Display</span> <img src="./down.svg" className={`dropdown-icon ${isOpen ? 'open' : ''}`} />
       </div>
 
