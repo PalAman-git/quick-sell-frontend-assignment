@@ -28,8 +28,8 @@ function App() {
     fetchTickets();
 
     //loading the saved group and sort values from the local storage
-    const savedGroup = localStorage.getItem("kanbanGroup" || "status");
-    const savedSort = localStorage.getItem("kanbanSort" || "priority");
+    const savedGroup = localStorage.getItem("kanbanGroup") || "status";
+    const savedSort = localStorage.getItem("kanbanSort") || "priority";
     setGroupBy(savedGroup);
     setSortBy(savedSort);
   }, []);
@@ -58,7 +58,7 @@ function App() {
         <div className="labels">
           <label className="group-by-label">
             Grouping
-            <select value={groupBy} onChange={handleGroupOnChange}>
+            <select value={groupBy || ""} onChange={handleGroupOnChange}>
               <option value="status">Status</option>
               <option value="priority">Priority</option>
               <option value="user">User</option>
@@ -67,7 +67,7 @@ function App() {
 
           <label className="sort-by-label">
            Ordering
-            <select value={sortBy} onChange={handleSortOnChange}>
+            <select value={sortBy || ""} onChange={handleSortOnChange}>
               <option value="priority">Priority</option>
               <option value="title">Title</option>
             </select>
